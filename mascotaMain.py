@@ -1,4 +1,4 @@
-nombre = "maurochupameelpico"
+nombre = ""
 hambre = 50
 energia = 80
 felicidad = 60
