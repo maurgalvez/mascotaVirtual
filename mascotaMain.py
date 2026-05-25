@@ -94,7 +94,7 @@ def entrenar():
         print ("  Opción no válida.")
 
 def jugar():
-    global energia
+    global energia, felicidad
 
     
     if energia < 15:
