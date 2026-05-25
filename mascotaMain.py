@@ -1,4 +1,4 @@
-nombre = ""
+nombre = "HOLA"
 hambre = 50
 energia = 80
 felicidad = 60
