@@ -156,7 +156,7 @@ try:
         dia += 1
         felicidad = felicidad + 5
         separacion()
-        print(f" {nombre} durmió {horas} horas y se recuperó")
+        print(f" {nombre} durmio hasta el otro día y se recuperó")
         ganar_exp(5)
 
         
