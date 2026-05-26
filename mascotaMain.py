@@ -9,16 +9,20 @@ experiencia = 0
 dia = 1
 
 try:
-
+    separacion():
+  
     nombre = input("Ingrese nombre de su Mascota\n:")
 
     def mostrar_estado():
+        separacion()
         print(f"{nombre} | Nivel {nivel} | Día {dia}")
+        separacion()
         print(f" Hambre {hambre}")
         print(f" Energía {energia}")
         print(f" Felicidad {felicidad}")
         print(f" Salud {salud}")
         print(f" EXP {experiencia}")
+        separacion()
 
     def subir_nivel():
         global nivel, experiencia, salud
@@ -33,69 +37,89 @@ try:
     def ganar_exp(cantidad):
         global experiencia
         experiencia += cantidad
+        separacion()
         print(f" +{cantidad} EXP")
+        separacion()
         subir_nivel()
 
     def alimentar():
         global hambre, felicidad, energia
+        separacion()
         print("\n ¿Qué le daras de comer?")
+        separacion()
         print("  1. Croquetas      (hambre -20, felicidad +5)")
         print("  2. Snack sabroso  (hambre -35, felicidad +15)")
         print("  3. Fruta fresca   (hambre -25, energia +10)")
         print("  0. Cancelar")
-
         opcion = input("Ingrese opción: ")
 
         if opcion == "1":
             hambre = hambre - 20
             felicidad = felicidad + 5
+            separacion()
             print(f"\n {nombre} comió sus croquetas")
+            separacion()
             ganar_exp(10)
         elif opcion == "2":
             hambre = hambre - 35
             felicidad = felicidad + 15
+            separacion()
             print(f"\n {nombre} comió sus Snack sabroso")
+            separacion()
             ganar_exp(15)
         elif opcion == "3":
             hambre = hambre - 25
             felicidad = felicidad + 10
+            separacion()
             print(f"\n {nombre} comió su fruta fresca")
+            separacion()
             ganar_exp(12)
         else:
+            separacion()
             print ("  Opción no válida.")
+            separacion()
 
     def entrenar():
         global energia, felicidad, hambre, salud
         
         if energia < 20:
+            separacion()
             print(f"\n {nombre} está muy cansado para entrenar.")
+            separacion()
             return
         
         print("\n ¿Qué entrenamiento hacer?")
+        separacion()
         print("  1. Caminata suave   (energia -10, salud +5)")
         print("  2. Ejercicio fuerte (energia -25, salud +15, hambre +15)")
         print("  3. Yoga y descanso  (energia -5,  felicidad +10)")
         print("  0. Cancelar")
-
         opcion = input("Ingrese opción: ")
 
         if opcion == "1":
             energia = energia - 10
             salud = salud + 5
+            separacion()
             print(f"\n {nombre} salió a caminar")
+            separacion()
             ganar_exp(15)
         elif opcion == "2":
             energia = energia - 25
             salud = salud + 15
             hambre = hambre + 15
+            separacion()
             print(f"\n {nombre} hizo ejercicio intenso")
+            separacion()
             ganar_exp(30)
         elif opcion == "3":
             energia = energia - 5
             felicidad = felicidad + 10
+            separacion()
             print(f"\n {nombre} hizo yoga y se relajó")
+            separacion()
             ganar_exp(12)
         else:
+            separacion()
             print ("  Opción no válida.")
 
     def jugar():
@@ -103,25 +127,31 @@ try:
 
         
         if energia < 15:
+            separacion()
             print(f"\n {nombre} no tiene energía para jugar.")
+            separacion()
             return
         juegos = ["pelota", "nadar", "tirar la cuerda"]
         juego = juegos[random.randint(0, len(juegos) - 1)]
-        
+
+        separacion()
         print(f"\n {nombre} juega a {juego}!")
+        separacion()
         energia = energia - 15
         felicidad = felicidad + 20
 
     def dormir():
         global energia, salud, hambre, dia
 
+        separacion()
         print(f"\n {nombre} se va a dormir...")
-
+    
         energia = energia + 10
         salud = salud + 2
         hambre = hambre + 5
         dia += 1
         felicidad = felicidad + 5
+        separacion()
         print(f" {nombre} durmió {horas} horas y se recuperó")
         ganar_exp(5)
 
@@ -129,13 +159,16 @@ try:
         
     while True:
         mostrar_estado()
+        separacion()
         print("1.- Alimentar")
         print("2.- Entrenar")
         print("3.- Jugar")
         print("4.- Dormir")
         print("5.- Salir")
+        separacion()
 
         opcion = input("Seleccione una Opción: ")
+        separacion()
 
         if opcion == "1":
             alimentar()
