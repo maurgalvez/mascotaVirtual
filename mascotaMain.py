@@ -6,7 +6,8 @@ salud = 100
 nivel = 1
 experiencia = 0
 dia = 1
-
+def separacion():
+  print("=" * 40)
 def mostrar_estado():
     print(f"{nombre} | Nivel {nivel} | Día {dia}")
     print(f" Hambre {hambre}")
