@@ -7,6 +7,8 @@ salud = 100
 nivel = 1
 experiencia = 0
 dia = 1
+def separacion():
+  print("=" * 40)
 
 try:
     separacion():
