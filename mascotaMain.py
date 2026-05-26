@@ -11,7 +11,7 @@ def separacion():
   print("=" * 40)
 
 try:
-    separacion():
+    separacion()
   
     nombre = input("Ingrese nombre de su Mascota\n:")
 
@@ -33,6 +33,7 @@ try:
             nivel += 1
             salud = salud + 20
             saludRecuperada = 20
+            separacion()
             print(f"\n {nombre} subió al nivel {nivel}!")
             print(f" Recupero {saludRecuperada} de salud ")
 
@@ -41,7 +42,7 @@ try:
         experiencia += cantidad
         separacion()
         print(f" +{cantidad} EXP")
-        separacion()
+        
         subir_nivel()
 
     def alimentar():
@@ -60,7 +61,7 @@ try:
             felicidad = felicidad + 5
             separacion()
             print(f"\n {nombre} comió sus croquetas")
-            separacion()
+            
             ganar_exp(10)
         elif opcion == "2":
             hambre = hambre - 35
@@ -74,12 +75,12 @@ try:
             felicidad = felicidad + 10
             separacion()
             print(f"\n {nombre} comió su fruta fresca")
-            separacion()
+            
             ganar_exp(12)
         else:
             separacion()
             print ("  Opción no válida.")
-            separacion()
+            
 
     def entrenar():
         global energia, felicidad, hambre, salud
@@ -89,13 +90,14 @@ try:
             print(f"\n {nombre} está muy cansado para entrenar.")
             separacion()
             return
-        
-        print("\n ¿Qué entrenamiento hacer?")
         separacion()
+        print("\n ¿Qué entrenamiento hacer?")
+        
         print("  1. Caminata suave   (energia -10, salud +5)")
         print("  2. Ejercicio fuerte (energia -25, salud +15, hambre +15)")
         print("  3. Yoga y descanso  (energia -5,  felicidad +10)")
         print("  0. Cancelar")
+        separacion()
         opcion = input("Ingrese opción: ")
 
         if opcion == "1":
